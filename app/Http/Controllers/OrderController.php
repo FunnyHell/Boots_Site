@@ -18,9 +18,9 @@ class OrderController extends Controller
         return redirect('/');
     }
 
-    public function edit(Request $request)
+    public function edit(Request $request, $id)
     {
-        Order::Edit($request);
+        Order::Edit($request, $id);
         return redirect('/home');
     }
 

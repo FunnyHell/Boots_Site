@@ -17,4 +17,9 @@ class PriceController extends Controller
         Price::Add($request);
         return redirect('/price-list');
     }
+
+    public function getall()
+    {
+        return view('welcome', ['prices' => Price::GetAll()]);
+    }
 }
