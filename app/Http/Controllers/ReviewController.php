@@ -15,12 +15,13 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         Review::Add($request);
-        return redirect('/review-list');
+        return redirect('/reviews');
     }
 
     public function delete(Request $request, $id)
     {
         Review::DeleteReview($request, $id);
-        return redirect('/review-list');
+        return redirect(route('reviews'));
     }
 }
+

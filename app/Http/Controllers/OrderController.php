@@ -29,4 +29,10 @@ class OrderController extends Controller
         Order::DeleteOrder($request, $id);
         return redirect('/home');
     }
+
+    public function editing($id)
+    {
+//        dd(Order::GetOne($id));
+        return view('editting', ['order' => Order::GetOne($id), 'id' => $id]);
+    }
 }

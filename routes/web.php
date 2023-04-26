@@ -23,10 +23,10 @@ Route::post('/reviews', [\App\Http\Controllers\ReviewController::class, 'store']
 
 Route::get('/home', [\App\Http\Controllers\OrderController::class, 'index'])->name('orders');
 Route::post('/order', [\App\Http\Controllers\OrderController::class, 'store'])->name('order.store');
-Route::post('/edit-order{id}', [\App\Http\Controllers\OrderController::class, 'edit'])->name('order.edit');
+Route::get('/edit-order/{id}', [\App\Http\Controllers\OrderController::class, 'editing'])->name('order.edit');
+Route::post('/edit-order/{id}', [\App\Http\Controllers\OrderController::class, 'edit']);
 
-Route::post('/delete-order/{id]', [\App\Http\Controllers\OrderController::class, 'delete'])->name('order.delete');
+Route::post('/delete-order/{id}', [\App\Http\Controllers\OrderController::class, 'delete'])->name('order.delete');
 Route::post('/delete-review/{id}', [\App\Http\Controllers\ReviewController::class, 'delete'])->name('review.delete');
 
-Route::post('/add-service', [\App\Http\Controllers\ServiceController::class, 'store'])->name('service.store');
 Route::post('/add-price', [\App\Http\Controllers\PriceController::class, 'store'])->name('price.store');

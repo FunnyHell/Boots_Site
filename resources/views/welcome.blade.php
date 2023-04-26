@@ -107,7 +107,7 @@
                                       class="input-text"></textarea>
                             <select name="price_id" class="input-text">
                                 @foreach($prices as $price)
-                                    <option value="{{$price->id}}">$price->service</option>
+                                    <option value="{{$price->id}}">{{$price->service}}</option>
                                 @endforeach
                             </select>
                             <input type="submit" value="Order" id="order">

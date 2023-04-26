@@ -8,13 +8,13 @@
 @import 'bootstrap/scss/bootstrap';
 
 #bg {
-    background: url('/storage/app/public/img/main-page-bg.png') fixed;
+    background: url('/storage/app/public/img/main-page-bg.png') fixed center center no-repeat;
     background-size: cover;
 }
 
 .first-main {
     padding: 500px auto;
-    height: 100vh;
+    height: 80vh;
 }
 
 .input-text {
@@ -55,19 +55,19 @@
 .order:checked {
     display: none;
 }
+
 .order:checked ~ h1 {
     display: none;
 }
 
 .order:checked ~ .order-form-container {
-    backdrop-filter: blur(5px);
     height: 100vh;
     display: block;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-label{
+label {
     width: 100%;
 }
 
@@ -88,13 +88,60 @@ label h1:hover {
 
 .second-main {
     position: relative;
-    background-color: rgba(169, 208, 220, 0.5);
+    background-color: rgba(128, 155, 165, 0.53);
     border: rgba(169, 208, 220, 0.75);
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 20px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
 }
 
 .second-main h1 {
     font-size: 40px;
+}
+
+th {
+    font-size: 30px;
+}
+
+td {
+    font-size: 20px;
+}
+
+#card h2 {
+    display: block;
+    font-size: 30px;
+    margin: 10px 20px 0 20px;
+}
+
+#card p {
+    display: block;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.review-form {
+    margin: auto;
+
+}
+
+.order-btn {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: rgb(175, 211, 224);
+    border: solid 1px rgb(175, 211, 224);
+    width: 70px;
 }

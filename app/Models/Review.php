@@ -17,7 +17,11 @@ class Review extends Model
 
     public static function Add(\Illuminate\Http\Request $request)
     {
-        DB::table('reviews')->insert($request->all());
+        DB::table('reviews')
+            ->insert(['name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'review' => $request->review]);
     }
 
     public static function DeleteReview(\Illuminate\Http\Request $request, $id)
